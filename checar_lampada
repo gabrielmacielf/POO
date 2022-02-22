@@ -1,0 +1,28 @@
+class Lampada:
+
+    def __init__(self, cor, local, tensao, luminosidade):
+        self.__cor = cor
+        self.__local = local
+        self.__tensao = tensao
+        self.__luminosidade = luminosidade
+        self.__ligada = False
+
+    def checar_lampada(self):
+        return self.__ligada
+
+    def ligar_desligar(self):
+        if self.__ligada:
+            self.__ligada = False
+        else:
+            self.__ligada = True
+
+
+lampada1 = Lampada('branca', 'sala', 110, 60)
+lampada2 = Lampada('amarela', 'quarto', 110, 50)
+
+lampada1.ligar_desligar()
+lampada2.ligar_desligar()
+lampada2.ligar_desligar()
+
+print(f'A lâmpada da sala está ligada? {lampada1.checar_lampada()}')
+print(f'A lâmpada do quarto está ligada? {lampada2.checar_lampada()}')
